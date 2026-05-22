@@ -7,6 +7,9 @@ The application provides automatic grade calculations, validation systems, descr
 
 ---
 
+# link 
+https://sondosprg-app-s6-data-seince-app-do8p1t.streamlit.app/
+
 # Preview
 
 ![Dashboard Screenshot](imgs\app.PNG)
@@ -78,7 +81,7 @@ project/
 Clone the repository:
 
 ```bash
-git clone 
+git clone https://github.com/Sondosprg/APP_S6_DATA_SEINCE.git
 ```
 
 Install dependencies:
@@ -113,8 +116,6 @@ This project was created to:
 * add already report 
 ---
 
-# link demo : 
-[]
 
 
 #  Contributing
