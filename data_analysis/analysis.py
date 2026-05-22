@@ -101,6 +101,17 @@ def Charts(df):
     
     fig_average_level = px.pie(average_level_df , names = "level" , values = "average")
     
+    
+    # field by average 
+    average_field = df.groupby("field")["average"].sum()
+    average_field_df = pd.DataFrame({
+        "field" : average_field.index,
+        "average" : average_field.values
+    }).sort_values(by = "average"  , ascending = False)
+    
+    fig_average_field = px.pie(average_field_df , names = "field" , values = "average")
+    
+    
     # distribution of td , tp , examen
     names_only_td , names_only_tp = names_td_tp(df)
     
@@ -115,5 +126,5 @@ def Charts(df):
     examens = df['exman'] 
     fig_examen = px.violin( examens, points= "all", box=True )
     
-    return average_modules ,  sum_modules  , fig_average_level , fig_td , fig_tp , fig_examen
+    return average_modules ,  sum_modules  , fig_average_level ,fig_average_field, fig_td , fig_tp , fig_examen
 

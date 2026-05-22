@@ -66,13 +66,14 @@ def displayResult(data_edited):
     with col4:
         st.write(describe["level"])
 
-    average_modules , sum_modules , fig_average_level , fig_td , fig_tp , fig_examen = Charts(data_edited_new)
+    average_modules , sum_modules , fig_average_level ,fig_average_field ,  fig_td , fig_tp , fig_examen = Charts(data_edited_new)
     
     st.markdown('###### top module cause in increasing average ')
     st.write(sum_modules.iloc[0])
     
     st.markdown('###### low  module cause in  decreasing average ')
     st.write(sum_modules.iloc[-1])
+    
     
     st.markdown('###### distribution ')
     tab1_distr , tab2_dist = st.tabs(["distribution of modules averages" ,"distribution of modules sum"])
@@ -82,8 +83,16 @@ def displayResult(data_edited):
     with tab2_dist:
         st.bar_chart(sum_modules)
     
-    st.markdown('###### average modules by levels  ')
-    st.plotly_chart(fig_average_level , use_container_width=True)
+    
+    st.markdown('###### average modules by levels and field  ')
+    average_level_tab  , average_field_tab= st.tabs(["average modules by levels" ,"average modules by field"])
+    
+    with average_level_tab:
+        st.plotly_chart(fig_average_level , use_container_width=True)
+    with average_field_tab:
+          st.plotly_chart(fig_average_field , use_container_width=True)
+    
+    
     
     st.markdown('###### distribution of td , tp , examen ')
     td_dist , tp_dist , examen_dist = st.tabs(["distribution of td" ,"distribution of  tp" ,"distribution of examen"])
@@ -137,12 +146,11 @@ def generate_random_data():
 
 
 # show main btns 
-col1, col2, col3 = st.columns([1, 4, 1])
+col1,  col3 = st.columns([5, 1])
 with col1:
-    st.button("calculate ∑", on_click=calculate)
+    st.button("calculate and analysis" , on_click=calculate)
 with col3:
     st.button("random ⚄" , on_click = generate_random_data)
-
 
 
 
