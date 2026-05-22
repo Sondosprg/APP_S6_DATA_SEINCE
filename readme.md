@@ -81,7 +81,7 @@ project/
 Clone the repository:
 
 ```bash
-git clone 
+git clone https://github.com/Sondosprg/APP_S6_DATA_SEINCE.git
 ```
 
 Install dependencies:
@@ -116,8 +116,6 @@ This project was created to:
 * add already report 
 ---
 
-# link demo : 
-[]
 
 
 #  Contributing
