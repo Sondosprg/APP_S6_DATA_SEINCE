@@ -7,6 +7,9 @@ The application provides automatic grade calculations, validation systems, descr
 
 ---
 
+# link 
+https://sondosprg-app-s6-data-seince-app-do8p1t.streamlit.app/
+
 # Preview
 
 ![Dashboard Screenshot](imgs\app.PNG)
