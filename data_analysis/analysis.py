@@ -11,9 +11,7 @@ def getNameModules(df):
 # calculate
 def results(df):
     
-    # convert datatype 
-    df[["td" , "tp","exman"]] = df[["td" , "tp" , "exman"]].astype(float)
-    df["coef"] = df["coef"].astype(int)
+
     
     
     list_averages = []

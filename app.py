@@ -16,6 +16,10 @@ df = pd.read_json("data_analysis/data/s6.json").T
 df_copy = df
 
 
+# convert datatype  (before entering)
+df_copy[["td" , "tp","exman"]] = df_copy[["td" , "tp" , "exman"]].astype(float)
+df_copy["coef"] = df_copy["coef"].astype(int)
+
 # configuration 
 data_edited = st.data_editor(
     df_copy,
@@ -108,8 +112,13 @@ def displayResult(data_edited):
 # validate  df before calculations 
 def validate(data_edited):
     
+    nb_null_values = data_edited.isnull().sum().sum()
+    if nb_null_values > 0:
+        st.warning(f"WARNING : cannot calculate empty cell ({nb_null_values} empty cells)")
+        return 
+        
     #test if user not edit value of -1 (because is empty)
-    if df[df[["td", "tp"]] == -1].equals(data_edited[data_edited[["td", "tp"]] == -1]):
+    if df_copy[df_copy[["td", "tp"]] == -1].equals(data_edited[data_edited[["td", "tp"]] == -1]):
         displayResult(data_edited)
     else:
         st.warning("WARNING : cannot modify -1 values (because is empty)")
