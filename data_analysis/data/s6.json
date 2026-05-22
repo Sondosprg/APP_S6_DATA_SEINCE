@@ -1,0 +1,60 @@
+
+{
+  "data_base_advanced": {
+    "coef": 3,
+    "td": 0,
+    "tp": 0,
+    "exman": 0,
+    "level": "hard",
+    "field": "software engineering"
+  },
+  "numerical_methods": {
+    "coef": 3,
+    "td": 0,
+    "tp": 0,
+    "exman": 0,
+    "level": "medium",
+    "field": "software engineering"
+  },
+  "cyber_security": {
+    "coef": 1,
+    "td": -1,
+    "tp": -1,
+    "exman": 0,
+    "level": "easy",
+    "field": "Cybersecurity"
+  },
+  "data_security": {
+    "coef": 3,
+    "td": -1,
+    "tp": 0,
+    "exman": 0,
+    "level": "medium",
+    "field": "Cybersecurity"
+  },
+  "data_analysis_advanced": {
+    "coef": 3,
+    "td": 0,
+    "tp": 0,
+    "exman": 0,
+    "level": "hard",
+    "field": "Data Science"
+  },
+  "advanced_web_programming": {
+    "coef": 3,
+    "td": -1,
+    "tp": 0,
+    "exman": 0,
+    "level": "medium",
+    "field": "software engineering"
+  },
+  "Machine_learning_1": {
+    "coef": 4,
+    "td":-1,
+    "tp": 0,
+    "exman": 0,
+    "level": "hard",
+    "field": "Data Science"
+  }
+}
+
